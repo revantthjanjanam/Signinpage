@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}  
+
+{% block content %}
+<style>
+    .login-form {
+        border: 2px solid #ccc;
+        padding: 30px;
+        width: 500px;
+        margin: 30px auto;
+        border-radius: 8px; /* Optional: adds rounded corners */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="login-form">
+    <form method='POST'>
+        <h3 align='center'>Login</h3>
+        <div class='form-group'>
+            <label for='email'>Email Address</label>
+            <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+            />
+        </div>
+        <div class='form-group'>
+            <label for='Password1'>Password</label>
+            <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+            />
+        </div>
+        <div>
+            <p>Don't have an account? <a href="/signup"><b>Sign Up</b></a></p> 
+        </div>
+        <br />
+        <div >
+            <button type="login" class="btn btn-primary">Login</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
